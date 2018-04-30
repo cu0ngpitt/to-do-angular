@@ -1,9 +1,20 @@
 <h1>{{title}}</h1>
 
 <section class="newList">
-  <p>Please enter your new list name here:</p>
-  <input #newListInput type="text">
-  <button id="addListButton" (click)="addList()">+</button>
-<div>
-  <app-list></app-list>
-</div>
+  <div>
+    <p>Please enter your new list name here:</p>
+    <input #newListInput type="text">
+    <button id="addListButton" (click)="addList(newListInput.value)">+</button>
+  </div>
+  <div>
+    <app-list></app-list>
+  </div>
+  <div class="delete">
+      <p>To delete an item:</p>
+        <ol>
+          <li>First select the item</li>
+          <li>Then click the Delete button below</li>
+        </ol>
+      <button id="del" onclick="delList()">Delete</button>
+    </div>
+</section>
