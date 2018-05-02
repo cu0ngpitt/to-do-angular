@@ -1,17 +1,14 @@
 <div class="lists">
-  {{list.todoLists}}
-<!--
   <ul id="dispList">
-    <li *ngFor="let list of lists">
+    <li *ngFor="let list of list.getLists">
       <tr>
         <td class="check">
-          <input type="checkbox">
+          <input id='checked' type='checkbox' (click)='isChecked(list.id, list.completed)'>
         </td>
         <td class="todo">
-          <p>{{list.title}}</p>
+          <p>{{list.name}} {{list.completed}}</p>
         </td>
       </tr>
     </li>
   </ul>
--->
 </div>
