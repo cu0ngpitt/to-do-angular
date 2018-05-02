@@ -9,17 +9,25 @@ import { ListService } from '../list.service';
 })
 export class ListComponent implements OnInit {
 
-  lists: List[] = [];
+  lists: List[];
 
-  constructor(private list:ListService) { }
+  constructor(private list: ListService) {
+    this.lists = list.getLists;
+    console.log(this.list.getLists);
+  }
 
   ngOnInit() {
   }
 
-  addList(list) {
-    this.lists.push(list);
-    return this;
-}
+  isChecked(id, completed) {
+    console.log(id, completed);
+  }
+
+
+//  addList(list) {
+//    this.lists.push(list);
+//    return this;
+//}
 
 
 }
