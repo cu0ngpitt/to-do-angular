@@ -19,11 +19,16 @@ export class ListComponent implements OnInit {
   ngOnInit() {
   }
 
-  isChecked(id, completed) {
-    console.log(id, completed);
+  isChecked(list) {
+    if (list.completed === false) { list.completed = true; }
+    else { list.completed = false; }
   }
 
+  delList(list) {
 
+      this.lists.splice(0, 1);
+
+  }
 //  addList(list) {
 //    this.lists.push(list);
 //    return this;
