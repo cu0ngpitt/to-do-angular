@@ -1,14 +1,33 @@
-<div class="lists">
-  <ul id="dispList">
-    <li *ngFor="let list of list.getLists">
-      <tr>
-        <td class="check">
-          <input id='checked' type='checkbox' (click)='isChecked(list.id, list.completed)'>
-        </td>
-        <td class="todo">
-          <p>{{list.name}} {{list.completed}}</p>
-        </td>
-      </tr>
-    </li>
-  </ul>
-</div>
+<section class="newList">
+  <div>
+    <p>Please enter your new list name here:</p>
+    <input #newListInput type="text">
+    <button id="addListButton" (click)="addList(newListInput.value)">+</button>
+  </div>
+  <div>
+
+  <div class="lists">
+    <ul id="dispList">
+      <li *ngFor="let list of list.getLists" [class.completed]="list.completed">
+        <tr>
+          <td class="check">
+            <input id='checked' type='checkbox' (click)='isChecked(list)'>
+          </td>
+          <td class="todo">
+            <p>{{list.name}} {{list.completed}}</p>
+          </td>
+        </tr>
+      </li>
+    </ul>
+  </div>
+
+  </div>
+  <div class="delete">
+    <p>To delete an item:</p>
+      <ol>
+        <li>First select the item</li>
+        <li>Then click the Delete button below</li>
+      </ol>
+    <button id="del" (click)="delList(list)">Delete</button>
+  </div>
+</section>
