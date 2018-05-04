@@ -10,6 +10,7 @@ import { ListService } from '../list.service';
 export class ListComponent implements OnInit {
 
   lists: List[];
+  lastId = 3;
 
   constructor(private list: ListService) {
     this.lists = list.getLists;
@@ -19,15 +20,23 @@ export class ListComponent implements OnInit {
   ngOnInit() {
   }
 
+  addList(newItem) {
+    let obj = {};
+    obj["id"] = ++this.lastId;
+    obj["name"] = newItem;
+    obj["completed"] = false;
+    this.lists.push(obj);    
+  }
+
   isChecked(list) {
     if (list.completed === false) { list.completed = true; }
     else { list.completed = false; }
   }
 
   delList(list) {
-
-      this.lists.splice(0, 1);
-
+    if (list.completed === true) {
+      this.lists.splice(list.id, 1);
+    }
   }
 //  addList(list) {
 //    this.lists.push(list);
