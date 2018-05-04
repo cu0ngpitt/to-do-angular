@@ -1,5 +1,5 @@
 export class List {
   id: number;
   name: string = '';
-  completed: boolean = false;
+  completed: boolean;
 }
