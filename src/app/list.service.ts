@@ -5,9 +5,9 @@ export class ListService {
 
   getLists = [
       {id: 0, name: 'test', completed: false},
-      {id: 1, name: 'test2', completed: false}
+      {id: 1, name: 'test2', completed: false},
+      {id: 2, name: 'test3', completed: false}
     ];
-  
 
   constructor() { }
 
