@@ -4,10 +4,14 @@ import { Injectable } from '@angular/core';
 export class ListService {
 
   getLists = [
-      {id: 0, name: 'test', completed: false},
-      {id: 1, name: 'test2', completed: false},
-      {id: 2, name: 'test3', completed: false}
+      
     ];
+
+  listUpdate(list) {
+    this.getLists = this.getLists.filter(x =>
+      x.completed === false);
+      console.log(this.getLists);
+    }
 
   constructor() { }
 
