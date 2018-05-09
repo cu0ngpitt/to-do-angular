@@ -7,5 +7,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = "Cuong's To Do App";
-  
+
+//  ondelList(event) {
+//    this.lists.delList(list);
+//    console.log(event);
+//  }
 }
