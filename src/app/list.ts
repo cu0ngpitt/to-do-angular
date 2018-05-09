@@ -1,5 +1,4 @@
-export class List {
-  id: number;
+export class List {  
   name: string = '';
   completed: boolean;
 }
