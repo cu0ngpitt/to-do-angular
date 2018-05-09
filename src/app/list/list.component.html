@@ -4,7 +4,6 @@
     <input #newListInput type="text">
     <button id="addListButton" (click)="addList(newListInput.value)">+</button>
   </div>
-  <div>
 
   <div class="lists">
     <ul id="dispList">
@@ -14,20 +13,20 @@
             <input id='checked' type='checkbox' (click)='isChecked(list)'>
           </td>
           <td class="todo">
-            <p>{{list.name}} {{list.completed}}</p>
+            <p>{{list.name}}</p>
           </td>
         </tr>
       </li>
     </ul>
   </div>
 
-  </div>
   <div class="delete">
     <p>To delete an item:</p>
       <ol>
         <li>First select the item</li>
         <li>Then click the Delete button below</li>
       </ol>
-    <button id="del" (click)="delList(list)">Delete</button>
+    <button id="del" (click)="delList(list)" (update)=delList($event)>Delete</button>
   </div>
+
 </section>
