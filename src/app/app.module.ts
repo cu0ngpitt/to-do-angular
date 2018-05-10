@@ -14,7 +14,8 @@ import { ListService } from './list.service';
     ListComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    FormsModule
   ],
   providers: [ListService],
   bootstrap: [AppComponent]
