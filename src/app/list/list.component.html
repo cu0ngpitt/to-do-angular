@@ -1,7 +1,7 @@
 <section class="newList">
   <div>
     <p>Please enter your new list name here:</p>
-    <input #newListInput type="text">
+    <input #newListInput type="text" [(ngModel)]="input">
     <button id="addListButton" (click)="addList(newListInput.value)">+</button>
   </div>
 
