@@ -1,4 +1,5 @@
-import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 import { List } from '../list';
 import { ListService } from '../list.service';
 
@@ -11,6 +12,8 @@ export class ListComponent implements OnInit {
 
   lists: List[];
 
+  @Input() input;
+  
   @Output() update = new EventEmitter();
 
   constructor(private list: ListService) {
@@ -24,8 +27,9 @@ export class ListComponent implements OnInit {
   addList(newItem) {
     let obj = {name: newItem, completed: false};
     if (newItem !== '')
-      this.lists.push(obj);    
+      this.lists.push(obj);
     console.log(this.lists);
+    this.input = "";
   }
 
   isChecked(list) {
