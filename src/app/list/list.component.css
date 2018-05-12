@@ -5,3 +5,28 @@ li {
 .completed {
   text-decoration: line-through;
 }
+
+.lists {
+  min-height: 300px;
+}
+
+.newItem {
+  border-color: #4ddbff;
+  border-width: 1px;
+}
+
+#addListButton {
+  color: white;
+  background-color: #0099ff;
+  border: none;
+  padding: 3px 10px;
+  border-radius: 5px;
+}
+
+#delButton {
+  color: white;
+  background-color: #0099ff;
+  border: none;
+  padding: 3px 10px;
+  border-radius: 5px;
+}
