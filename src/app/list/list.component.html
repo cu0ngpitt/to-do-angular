@@ -1,8 +1,8 @@
 <section class="newList">
   <div>
     <p>Please enter your new list name here:</p>
-    <input #newListInput type="text" [(ngModel)]="input">
-    <button id="addListButton" (click)="addList(newListInput.value)">+</button>
+    <input class="newItem" #newListInput type="text" [(ngModel)]="input">
+    <button id="addListButton" (click)="addList(newListInput.value)">Add</button>
   </div>
 
   <div class="lists">
@@ -26,7 +26,7 @@
         <li>First select the item</li>
         <li>Then click the Delete button below</li>
       </ol>
-    <button id="del" (click)="delList(list)" (update)=delList($event)>Delete</button>
+    <button id="delButton" (click)="delList(list)" (update)=delList($event)>Delete</button>
   </div>
 
 </section>
