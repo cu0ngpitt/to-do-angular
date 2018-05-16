@@ -1,9 +1,14 @@
+.add {
+  text-align: center;
+}
+
 li {
   list-style: none;
 }
 
 .completed {
   text-decoration: line-through;
+  color: red;
 }
 
 .lists {
@@ -13,6 +18,8 @@ li {
 .newItem {
   border-color: #4ddbff;
   border-width: 1px;
+  width: 400px;
+  height: 25px;
 }
 
 #addListButton {
@@ -21,6 +28,7 @@ li {
   border: none;
   padding: 3px 10px;
   border-radius: 5px;
+  height: 29px;
 }
 
 #delButton {
@@ -29,4 +37,23 @@ li {
   border: none;
   padding: 3px 10px;
   border-radius: 5px;
+  height: 29px;
+}
+
+.todo {
+  color: black;
+}
+
+.list-lines {
+  height: 25px;
+}
+
+#dispList {
+  padding-left: 80px;
+  padding-bottom: 50px;
+}
+
+.delete {
+  padding-left: 80px;
+  border-top: 1px solid #bfbfbf;
 }

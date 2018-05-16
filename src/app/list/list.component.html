@@ -1,13 +1,13 @@
 <section class="newList">
-  <div>
-    <p>Please enter your new list name here:</p>
-    <input class="newItem" #newListInput type="text" [(ngModel)]="input">
+
+  <div class="add">
+    <input class="newItem" #newListInput type="text" [(ngModel)]="input" placeholder="Enter new items here">
     <button id="addListButton" (click)="addList(newListInput.value)">Add</button>
   </div>
 
   <div class="lists">
     <ul id="dispList">
-      <li *ngFor="let list of list.getLists" [class.completed]="list.completed">
+      <li *ngFor="let list of list.getLists" [class.completed]="list.completed" class="list-lines">
         <tr>
           <td class="check">
             <input id='checked' type='checkbox' (click)='isChecked(list)'>
